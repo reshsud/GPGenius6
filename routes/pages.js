@@ -10,6 +10,14 @@ router.get("/register",(req,res) => {
     res.render("register");
 });
 
+router.get("/qa",(req,res) => {
+    res.render("qa");
+});
+
+router.get("/info",(req,res) => {
+    res.render("info");
+});
+
 router.get("/profile",userController.isLoggedIn,(req,res) => {
     if (req.user){
         res.render("profile",{user: req.user});
