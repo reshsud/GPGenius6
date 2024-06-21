@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet" type="text/css"/>
+
+
+<body>
+<h4 class="login-box"></h4>
+  <p class="{{msg_type}}">{{msg}}</p>
+  <body class="flex items-center justify-center min-h-screen">
+  
+  <div class="relative text-center">
+
+    <div class="header" id=".gradient-text" style="overflow: auto;">
+      <h2 class="text-5xl font-bold LoginHere relative z-10">Login Here</h2>
+      <h3 class="text-orange-400 mb-1"><span class="auto-type"></span></h3>
+      <h5 class="text-orange-400">If you are a new user, sign up
+        <a href="/register"<span class="dark-orange"> here</span></a></h5>
+
+    </div>
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+
+    </script>
+
+    <form id="loginForm" action="/auth/login" method="post" class="w-60p mx-auto" onsubmit="storeEmail(event)">
+      <div class="line">
+        <i class="ri-hashtag text-orange-400 mr-2"></i>
+        <input type="email" name="email" id="email" placeholder="Student Email Address"
+          class="appearance-none bg-transparent border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none mb-6">
+      </div>
+      <div class="wrapper">
+        <input type="password" name="password" id="password" placeholder="Password" class="appearance-none bg-transparent border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none mb-6" style="color: #ffa57d;">
+        <span class="show-btn"><i class="fas fa-eye"></i></span>
+      </div>
+      <button type="submit" id="login"
+        class="login-btn w-full py-2 px-4 mt-4 mb-8 bg-orange-400 text-orange rounded-md transition duration-300"> Login</button>
+       </div>     
+      </form>
+
+</div>
+  <script src="/views/script.js"></script>
+  <script src="https://kit.fontawesome.com/e770c84433.js" crossorigin="anonymous"></script>
+
+  <div class="absolute">
+    <div class="bg-shape1 bg-purple opacity-50 bg-blur"></div>
+    <div class="bg-shape2 bg-pink opacity-50 bg-blur"></div>
+    <div class="bg-shape3 bg-blue opacity-50 bg-blur"></div>
+    <div class="bg-shape4 bg-beige opacity-50 bg-blur"></div>
+  </div>
+
+<script>
+  
+
+document.querySelectorAll('.grade, .courseType').forEach(element => {
+    element.addEventListener('change', saveGpa);
+});
+
+  function validateAndRedirect() {
+      const email = document.getElementById('email').value;
+      if (email) {
+    
+      } else {
+        alert('Please enter your email.');
+      }
+    }
+
+    const passField = document.querySelector("input");
+    const showBtn = document.querySelector("span i");
+    showBtn.onclick = (()=>{
+      if(passField.type === "password"){
+        passField.type = "text";
+        showBtn.classList.add("hide-btn");
+      }else{
+        passField.type = "password";
+        showBtn.classList.remove("hide-btn");
+      }
+    });
+
+    function openOptions() {
+    document.getElementById('opencalc').classList.remove('hidden');
+    document.getElementById('openresults').classList.remove('hidden');
+  }
+  var typed = new Typed(".auto-type", {
+    strings: ["GPGenius, based on Silver Creek High School"],
+    typeSpeed: 75,
+  });
+  
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const passField = document.querySelector("#password");
+    const showBtn = document.querySelector(".show-btn i");
+  
+    document.querySelector('.show-btn').addEventListener('click', () => {
+      if (passField.type === "password") {
+        passField.type = "text";
+        showBtn.classList.replace("fa-eye", "fa-eye-slash");
+      } else {
+        passField.type = "password";
+        showBtn.classList.replace("fa-eye-slash", "fa-eye");
+      }
+    });
+  });  
+
+  function storeEmail(event) {
+  event.preventDefault();
+  const email = document.getElementById('email').value;
+  if (email) {
+    localStorage.setItem('userEmail', email);
+    document.getElementById('loginForm').submit();
+  } else {
+    alert('Please enter your email.');
+  }
+}
+
+  </script>
+
+</body>
+</html>
