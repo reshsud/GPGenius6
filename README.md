@@ -49,7 +49,7 @@ Select * from gpa_data;
       - Open your terminal, navigate to your project directory, and run the following commands:
 
 npm init -y
-npm install express mysql body-parser cors
+npm install express mysql body-parser cors cookie-parser nodemailer hbs dotenv
 
   - Step 4: Run the Server
     - Start Your Node.js Server:
@@ -107,3 +107,5 @@ npm install express mysql body-parser cors
   - HTML
   - HBS
   - CSS
+  - Node.JS
+  - Express.JS
