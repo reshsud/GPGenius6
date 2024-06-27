@@ -9,6 +9,7 @@
 <body onload="getDetails()">
     <div class="container-fluid">
         <h2 id="title" class="text-5x1 font-bold gradient-text relative z-10" style="margin-top: 10%;">GPA Calculator</h2>
+            <h4>Email: {{val}}</h4>
             {{#each user}}
         <tr class="row">
         </tr>
@@ -32,9 +33,8 @@
            </tbody>
 </table>
 
-    <h2>val:{{val}}</h2>
-    <h2>val:{{avg}}</h2>
-    <h2>val:{{avg2}}</h2>
+    <h3>Cummulative Unweighted GPA: {{avg}}</h3>
+    <h3>Cummulative Weighted GPA: {{avg2}}</h3>
        
 
     </div>
