@@ -1,56 +1,79 @@
-
-
 <head>
+  <!-- Set the character encoding for the document -->
   <meta charset="utf-8">
+
+  <!-- Set the viewport to ensure the page is responsive -->
   <meta name="viewport" content="width=device-width">
+
+  <!-- Link to Google Fonts to use the Poppins font family -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Link to Tailwind CSS for utility-first CSS classes -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <title>replit</title>
+
+  <!-- Link to a custom CSS file for sidebar styling -->
   <link href="/css/sidebar.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
+  <!-- Link to Google Fonts to use Material Symbols Outlined icons -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   </head>
   <body>
+    <!-- Sidebar section -->
     <aside class="sidebar">
       <div class="logo">
-        <img src="/images/profile.png" alt="logo">
+        <img src="/images/profile.png" alt="logo"> <!--displays logo-->
         <h2>GPGenius</h2>
       </div>
       <ul class="links">
-        <h4>Main Menu</h4>
+        <h4>Main Menu</h4> <!--displays main menu and its features through the sidebar:home, information, faq, transcript, and logout-->
         <li>
+          <!-- Home section -->
           <span class="material-symbols-outlined" style="color:#ffa57d">
           home
           </span>
-          <a href="#">Home</a>
+          <a href="/home">Home</a>
         </li>
+
+        <!-- Info section -->
         <li>
           <span class="material-symbols-outlined" style="color:#ffa57d">
           info
           </span>
-          <a href="#">Information</a>
+          <a href="/info">Information</a>
         </li>
+
+        <!-- FAQ section -->
         <li>
           <span class="material-symbols-outlined" style="color:#ffa57d">
           question_mark
           </span>
-          <a href="#">FAQ</a>
+          <a href="/qa">FAQ</a>
         </li>
+
+        <!-- Transcript section -->
         <li>
           <span class="material-symbols-outlined" style="color:#ffa57d">
-          summarize
+          History
           </span>
-          <a href="#">Transcript</a>
+          <a href="/profile">History</a>
         </li>
+
+        <li>
+          <span class="material-symbols-outlined" style="color:#ffa57d">
+          calculate
+          </span>
+          <a href="/grade">Grade Calculator</a>
+        </li>
+
+         <!-- Logout link, positioned at the bottom of the sidebar -->
           <li style="position:absolute; bottom:10px">
               <span class="material-symbols-outlined" style="color:#ffa57d;">
               logout
               </span>
-              <a href="/auth/logout">Logout</a>
+              <a href="/auth/logout" id="logoutLink">Logout</a>
             </li>
       </ul>
     </aside>
-
 </body>

@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 {{> header  }}
-<body>
-    {{> navbear  }}
-    
+
+<head>
+    <link rel="stylesheet" href="/css/profile.css">
+    <script src="/profile.js"></script>
+</head>
+<body onload="getDetails()">
     <div class="container-fluid">
-        <h2>User Profile</h2>
-        <img src="/images/profile.png" />
-        <h3>Name: {{user.NAME}} </h3>
-        <h3>Email: {{user.EMAIL}}</h3>
+        <h2 id="title" class="text-5x1 font-bold gradient-text relative z-10" style="margin-top: 10%;">GPA Calculator</h2>
+            {{#each user}}
+        <tr class="row">
+        </tr>
+        {{/each}}
+    <table>
+    <thead>
+        <tr>
+            <th>Class Name</th>
+            <th>Grade</th>
+            <th>Course Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each user}}
+        <tr class="row">
+            <td class="cell">{{class_name}}</td>
+            <td class="cell">{{grade}}</td>
+            <td class="cell">{{course_type}}</td>
+        </tr>
+        {{/each}}
+           </tbody>
+</table>
+
+    <h2>val:{{val}}</h2>
+    <h2>val:{{avg}}</h2>
+    <h2>val:{{avg2}}</h2>
+       
+
     </div>
+
+    <div class="absolute">
+              <div class="bg-shape1 bg-purple opacity-50 bg-blur"></div>
+              <div class="bg-shape2 bg-pink opacity-50 bg-blur"></div>
+              <div class="bg-shape3 bg-blue opacity-50 bg-blur"></div>
+              <div class="bg-shape4 bg-beige opacity-50 bg-blur"></div>
+              <div class="bg-shape5 bg-purple opacity-50 bg-blur"></div>
+              <div class="bg-shape6 bg-pink opacity-50 bg-blur"></div>
+              <div class="bg-shape7 bg-blue opacity-50 bg-blur"></div>
+              <div class="bg-shape8 bg-beige opacity-50 bg-blur"></div>
+            </div>
 </body>
+
+
 </html>

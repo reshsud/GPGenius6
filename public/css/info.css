@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 *,
 *::after,
@@ -327,7 +327,11 @@ ul {
 .bg-shape1,
 .bg-shape2,
 .bg-shape3,
-.bg-shape4 {
+.bg-shape4,
+.bg-shape5,
+.bg-shape6,
+.bg-shape7,
+.bg-shape8{
   position: absolute;
   width: 400px;
   height: 400px;
@@ -357,6 +361,26 @@ ul {
   animation-name: four;
 }
 
+.bg-shape5 {
+  background-color: #ff8647;
+  animation-name: five;
+}
+
+.bg-shape6 {
+  background-color: #ffe4a8;
+  animation-name: six;
+}
+
+.bg-shape7 {
+  background-color: #ffc4ab;
+  animation-name: seven;
+}
+
+.bg-shape8 {
+  background-color: #ffaa00;
+  animation-name: eight;
+}
+
 @keyframes one {
   0%,
   100% {
@@ -384,7 +408,7 @@ ul {
   0%,
   100% {
     left: 400px;
-    top: 0;
+    top: 0px;
   }
 
   25% {
@@ -429,8 +453,8 @@ ul {
 @keyframes four {
   0%,
   100% {
-    top: 0;
-    center: 0;
+    top: 0px;
+    center: 0px;
   }
 
   25% {
@@ -449,6 +473,98 @@ ul {
   }
 }
 
+@keyframes five {
+  0%,
+  100% {
+    right: 500px;
+    bottom: 1300px;
+  }
+
+  25% {
+    right: 200px;
+    bottom: 1200px;
+  }
+
+  50% {
+    right: 300px;
+    bottom: 1400px;
+  }
+
+  75% {
+    right: 100px;
+    bottom: 1100px;
+  }
+}
+
+@keyframes six {
+  0%,
+  100% {
+    left: 400px;
+    bottom: 1000px;
+  }
+
+  25% {
+    left: 200px;
+    bottom: 1300px;
+  }
+
+  50% {
+    left: 500px;
+    bottom: 1500px;
+  }
+
+  75% {
+    left: 350px;
+    bottom: 1300px;
+  }
+}
+
+@keyframes seven {
+  0%,
+  100% {
+    bottom: 890px;
+    left: 100px;
+  }
+
+  25% {
+    bottom: 800px;
+    left: 400px;
+  }
+
+  50% {
+    bottom: 1000px;
+    left: 250px;
+  }
+
+  75% {
+    bottom: 1500px;
+    left: 100px;
+  }
+}
+
+@keyframes eight {
+  0%,
+  100% {
+    bottom: 1000px;
+    center: 0px;
+  }
+
+  25% {
+    bottom: 1500px;
+    center: -100px;
+  }
+
+  50% {
+    bottom: 1600px;
+    center: -50px;
+  }
+
+  75% {
+    bottom: 1300px;
+    center: -30px;
+  }
+}
+
 .opacity-50 {
   opacity: 0.5;
 }
@@ -456,4 +572,3 @@ ul {
 .bg-blur {
   filter: blur(2rem);
 }
-

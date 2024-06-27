@@ -2,19 +2,24 @@
 <html>
 
 <head>
+  <!-- Meta tags for character set and viewport settings -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  
+  <!-- Title of the webpage -->
+  <title>Information</title>
+  
+  <!-- Link to custom stylesheet -->
   <link href="/css/info.css" rel="stylesheet" type="text/css" />
+
+  <!-- Link to Google Material Symbols stylesheet -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 </head>
 
-    <body>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-      </head>
-      <body>
-        <aside class="sidebar" style="z-index: 10;">
+<body>
+  <aside class="sidebar" style="z-index: 10;">
               <div class="logo">
-                <img src="logo.jpg" alt="logo">
+              <img src="/images/profile.png" alt="logo"> <!--displays logo-->
                 <h2>GPGenius</h2>
               </div>
               <ul class="links">
@@ -23,25 +28,25 @@
                   <span class="material-symbols-outlined" style="color:#ffa57d">
                   home
                   </span>
-                  <a window.location.href = "#">Home</a>
+                  <a href="/home">Home</a>
                 </li>
                 <li>
                   <span class="material-symbols-outlined" style="color:#ffa57d">
                   info
                   </span>
-                  <a href="#">Information</a>
+                  <a href="/info">Information</a>
                 </li>
                 <li>
                   <span class="material-symbols-outlined" style="color:#ffa57d">
                   question_mark
                   </span>
-                  <a href="#">FAQ</a>
+                  <a href="/qa">FAQ</a>
                 </li>
                 <li>
                   <span class="material-symbols-outlined" style="color:#ffa57d">
                   summarize
                   </span>
-                  <a href="#">Transcript</a>
+                  <a href="/profile">Transcript</a>
                 </li>
                   <li style="position:absolute; bottom:10px">
                       <span class="material-symbols-outlined" style="color:#ffa57d;">
@@ -52,11 +57,15 @@
               </ul>
             </aside>
 
+  <!-- Information Page-->
   <div class="container">
     <main class="main flow">
-      <h1 class="main__heading">Made for <span class="orange">You</span></h1>
+      <h1 class="main__heading">Stay<span class="orange">Smart.</span></h1>
       <div class="main__cards cards">
         <div class="cards__inner">
+
+          
+          <!-- Card for Integrated AI information -->
           <div class="cards__card card">
             <h2 class="card__heading"></h2>
             <p class="card__name">Integrated AI</p>
@@ -68,6 +77,7 @@
 
           </div>
 
+          <!-- Card for Intuitive usage information -->
           <div class="cards__card card">
             <h2 class="card__heading"></h2>
             <p class="card__name">Easy Usage</p>
@@ -79,6 +89,7 @@
 
           </div>
 
+            <!-- Card for Secured data information -->
           <div class="cards__card card">
             <h2 class="card__heading"></h2>
             <p class="card__name">Secured Data</p>
@@ -89,9 +100,11 @@
             </ul>
             
         </div>
-
+    
+    <!-- Additional card for Instructions -->
         <main class="main flow">
           <div class="main__cards cards">
+            <h1 class="main__heading">Made for<span class="orange"> You</span></h1>
             <div class="cards__inner">
               <div class="cards__card cardy transition duration-150 ease-out hover:ease-in" style=>
                 <h2 class="card__heading"></h2>
@@ -111,6 +124,8 @@
                   </ol>
               </div>
             </div>
+
+        <!-- Additional card for Tips to Improve GPA -->
             <main class="main flow">  
               <div class="main__cards cards">
                 <div class="cards__card card">
@@ -129,6 +144,8 @@
 
                   </div>
                 </div>
+
+          <!-- Additional card for correlation to prompt -->
                 <main class="main flow">  
                   <div class="main__cards cards">
                     <div class="cards__card card">
@@ -142,6 +159,8 @@
                 <div class="overlay cards__inner"></div>
               </div>
             </main>
+
+        <!-- JavaScript for interactive elements and animations -->
             <script>
                 console.clear();
 
@@ -150,6 +169,8 @@ const cardsContainerInner = document.querySelector(".cards__inner");
 const cards = Array.from(document.querySelectorAll(".card"));
 const overlay = document.querySelector(".overlay");
 
+
+// Function to apply overlay mask effect on card hover
 const applyOverlayMask = (e) => {
   const overlayEl = e.currentTarget;
   const x = e.pageX - cardsContainer.offsetLeft;
@@ -158,6 +179,7 @@ const applyOverlayMask = (e) => {
   overlayEl.style = `--opacity: 1; --x: ${x}px; --y:${y}px;`;
 };
 
+// Function to create overlay call-to-action element
 const createOverlayCta = (overlayCard, ctaEl) => {
   const overlayCta = document.createElement("div");
   overlayCta.classList.add("cta");
@@ -166,6 +188,7 @@ const createOverlayCta = (overlayCard, ctaEl) => {
   overlayCard.append(overlayCta);
 };
 
+// ResizeObserver to update overlay size on card resize
 const observer = new ResizeObserver((entries) => {
   entries.forEach((entry) => {
     const cardIndex = cards.indexOf(entry.target);
@@ -187,15 +210,20 @@ const initOverlayCard = (cardEl) => {
   observer.observe(cardEl);
 };
 
+// Apply overlay effect to each card
 cards.forEach(initOverlayCard);
 document.body.addEventListener("pointermove", applyOverlayMask);
 
             </script>
-            <div class="absolute">
+             <div class="absolute">
               <div class="bg-shape1 bg-purple opacity-50 bg-blur"></div>
               <div class="bg-shape2 bg-pink opacity-50 bg-blur"></div>
               <div class="bg-shape3 bg-blue opacity-50 bg-blur"></div>
               <div class="bg-shape4 bg-beige opacity-50 bg-blur"></div>
+              <div class="bg-shape5 bg-purple opacity-50 bg-blur"></div>
+              <div class="bg-shape6 bg-pink opacity-50 bg-blur"></div>
+              <div class="bg-shape7 bg-blue opacity-50 bg-blur"></div>
+              <div class="bg-shape8 bg-beige opacity-50 bg-blur"></div>
             </div>
 </body>
 

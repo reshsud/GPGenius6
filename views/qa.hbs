@@ -1,12 +1,19 @@
 <!DOCTYPE html>
  <html>
+{{> header  }}
+{{> chatbot  }}
+
  <head>
+  <!-- Page title and meta information -->
  	<title>Questions and Answers</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Fonts and Tailwind CSS integration -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/qa.css">
    
+  <!-- Google Analytics script -->
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
@@ -14,8 +21,8 @@
 	  gtag("config", "G-1JHMFQXCEW");
 	</script>
  	
+  <!-- Custom CSS styling -->
  	<style>
-
     body {
           background: rgb#ffff;
           font-family: 'Poppins', sans-serif;
@@ -25,10 +32,6 @@
           justify-content: center;
           align-items: center;
           height: 100vh;
-      }
-  
-      
-
       }
 
 * {
@@ -161,7 +164,6 @@ body {
 .faq-contact .contact-btn {
  padding: 8px 20px;
  background-color: #000;
- color: #fba57e;
  text-decoration: none;
  display: inline-block;
  border: #000 1px solid;
@@ -177,59 +179,20 @@ body {
 .heading {
      font-size: 1.5rem;
 }
-  </style>
+}
+</style>
 </head>
 <body>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-  </head>
-  <body>
-    <aside class="sidebar" style="color:#ffa57d;">
-      <div class="logo">
-        <img src="images/logo.jpg" alt="logo">
-        <h2>GP Genius</h2>
-      </div>
-      <ul class="links">
-        <h4>Main Menu</h4>
-        <li>
-          <span class="material-symbols-outlined" style="color:#ffa57d;">
-          home
-          </span>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <span class="material-symbols-outlined" style="color:#ffa57d;">
-          info
-          </span>
-          <a href="#">Information</a>
-        </li>
-        <li>
-          <span class="material-symbols-outlined" style="color:#ffa57d;">
-          question_mark
-          </span>
-          <a href="#">FAQ</a>
-        </li>
-        <li>
-          <span class="material-symbols-outlined" style="color:#ffa57d;">
-          summarize
-          </span>
-          <a href="#">Transcript</a>
-        </li>
-        <li style="position:absolute; bottom:10px">
-          <span class="material-symbols-outlined" style="color:#ffa57d;">
-          logout
-          </span>
-          <a href="#">Logout</a>
-        </li>
-      </ul>
-    </aside>
 
-   <div class="qa">
+ <!-- Main content section for Questions and Answers -->
+ <div class="qa">
 	 <section class="qa-section">
 		<div class="faq-top">
 			<h2 class="heading" style="font-weight: bold;">FREQUENTLY ASKED QUESTIONS</h2>
 			<p>Last Updated on April 6, 2024</p>
 		</div>
 		<div class="answer">
+      <!-- FAQ Item 1 -->
 			<article class="answer__item open">
 				<span class="question">What grading scale is GPGenius based on?</span>
 				<div class="answer-cont">
@@ -239,12 +202,14 @@ body {
 				</div>
 			</article>
 			<article class="answer__item">
+        <!-- FAQ Item 2 -->
 				<span class="question">Can I share my GPA results?</span>
 				<div class="answer-cont">
 					<p>There are many different platforms that you can share your GPA to from our website. You can reach the share GPA button on the results page and we have a wide selection of social media platforms for you to share your GPA on. You can reach the results page via two methods. If you are already a prexisting user on our page, while logging our intuitive page will give you the selection between two choices: one being to proceed to the GPA calculator, and the other option to see previously saved GPA's. If you click on the latter option, you will be redirected to the results page, where the share button is an option. </p>
 				</div>
 			</article>
 			<article class="answer__item">
+        <!-- FAQ Item 3 -->
 				<span class="question">What if I made an error when I was inputting my class and grade information?</span>
 				<div class="answer-cont">
 					<p>Our GPA calculator gives you the option to change your results while calculating. There is no need to click delete or reload the page with GPGenius! You simply click on the mistake you made and correct it. Incase you made a mistake and clicked calulate GPA, there is still also no need to reload the page. Just correct your mistakes and click calculate GPA again so that the correct results will appear calculated to you.</p>
@@ -255,7 +220,7 @@ body {
 			<h3>STILL HAVE QUESTIONS?</h3>
       <h4>CONTACT US</h4>
 
-      
+      <!-- Contact form -->
       <form target="_blank" action="https://formsubmit.co/gpgeniusfbla@gmail.com" method="POST">
         <input id="name" type="text" name="name" placeholder="Full Name">
         <input id="email" type="email" name="email" placeholder="Email Address">
@@ -266,7 +231,11 @@ body {
 		</div>
 	</section>
   </div>
-</div><script>let items = document.querySelectorAll(".answer .answer__item .question");
+</div>
+
+<!-- Script for FAQ item toggle functionality -->
+<script>
+let items = document.querySelectorAll(".answer .answer__item .question");
 items.forEach(function (t) {
 t.addEventListener("click", function (e) {
  items.forEach(function (e) {
@@ -277,23 +246,10 @@ t.addEventListener("click", function (e) {
 });
 });
 </script>
-  <!-- Back button -->
-  <button class="backButton" onclick="goBack()">
-    <!-- Reversed arrow SVG -->
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#ffffff" width="24" height="24">
-       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M15 19l-7-7 7-7"/>
-          </svg>
-      </div>
-    </svg>
-  </button>
-
-  <script>
-    function goBack() {
-      window.location.href = "home.html";
-    }
-  </script>
-
+ 
+ 
 <div class="absolute">
+  <!-- Background shapes for aesthetic purposes -->
   <div class="bg-shape1 bg-purple opacity-50 bg-blur"></div>
   <div class="bg-shape2 bg-pink opacity-50 bg-blur"></div>
   <div class="bg-shape3 bg-blue opacity-50 bg-blur"></div>

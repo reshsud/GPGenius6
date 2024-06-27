@@ -1,56 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+        <!-- Meta tags for character set and viewport settings -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title></title>
+        
+        <title>Registration Page</title>
+
+        <!-- Internal CSS -->
         <link href="/css/register.css" rel="stylesheet" type="text/css" />
+
+         <!-- Link to Google Fonts, Tailwind CSS, and Remixicon for additional styling and icons -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+      
       </head>
 
       <body>
-        <style>
-        </style>
-        <script src="script.js"></script>
       </body>
 <html>
-
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-      </head>
+  
+      <!-- Heading with glass effect and centered alignment -->
       <h4 class="glass-effect center"></h4>
+      
+        <!-- Main body with flexbox centering -->
         <body class="flex items-center justify-center min-h-screen">
           <div>
+            <!-- Header section for the sign-up form -->
             <div class="text-center">
               <div class="header" id="#gradient-text">
               <h2 class="text-5xl font-bold gradient-text z-10 header">Sign Up</h2>
               </div>
             </div>
-   {{#if msg}}
+    
+  <!-- Conditional message display using Handlebars.js syntax -->
+  {{#if msg}}
   <p class="{{msg_type}}">{{msg}}</p>
   {{/if}} 
+
+  <!-- Registration Page where user creates account through providing
+  name, email, password, and confirmation of password.  -->
   <form action="/auth/register" method="post">
+    <!-- Name input group -->
     <div class="input-group" style="margin-bottom: 15px;">
       <label for="name" class="center-align text-orange-400" style="margin-right: 6px;">Full Name</label>
       <input type="name" name="name" id="name" class="focus:outline-none" style="background-color: transparent;" placeholder="Enter your name" required>
     </div>
+
+    <!-- Email input group -->
     <div class="input-group" style="margin-bottom: 15px;">
       <label for="email" class="left-align" style="margin-right: 6px;">Email</label>
       <input type="email" name="email" id="email" class="focus:outline-none" style="background-color: transparent;" placeholder="Enter your email" required>
     </div>
+
+    <!-- Password input group -->
     <div class="input-group" style="margin-bottom: 15px;">
       <label for="password" class="left-align" style="margin-right: 6px;">Password</label>
       <input type="password" name="password" id="password" class="focus:outline-none" style="background-color: transparent;" placeholder="Enter your password" required>
     </div>
+
+    <!-- Confirm input group -->
     <div class="input-group" style="margin-bottom: 15px;">
         <label for="confirm-password" class="left-align" class="focus:outline-none" style="margin-right: 6px;">Confirm Password</label>
         <input type="password" name="confirm_password" class="focus:outline-none"style="background-color: transparent; border-bottom: 1px solid orange;"placeholder="Confirm your password" required>
       </div>
+
+    <!-- Submit button for the registration form -->
     <button type="submit" class="login-btn">Register</button>
   </form>
+
+  <!-- If user already is a member they can click and be redirected to login page-->
   <p class="input-group">Already a member? <a href="/" class="signup-link" style="border-bottom: 1px solid orange;">Login now</a></p>
 </div>
           <div class="absolute">
+            <!-- Background shapes for aesthetic purposes -->
             <div class="bg-shape1 bg-purple opacity-50 bg-blur"></div>
             <div class="bg-shape2 bg-pink opacity-50 bg-blur"></div>
             <div class="bg-shape3 bg-blue opacity-50 bg-blur"></div>

@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  
+<!-- Link to Google Fonts for the Poppins font family -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Link to Tailwind CSS for utility-first CSS classes -->
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<!-- Link to Remix Icon for icons -->
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- Link to custom stylesheet -->
 <link href="/css/style.css" rel="stylesheet" type="text/css"/>
 
 
 <body>
+<!-- Placeholder for login message -->
 <h4 class="login-box"></h4>
+  <!-- Placeholder for dynamic message -->
   <p class="{{msg_type}}">{{msg}}</p>
   <body class="flex items-center justify-center min-h-screen">
   
   <div class="relative text-center">
-
+    <!-- Allows user to choose between logging in or registering for a new account-->
     <div class="header" id=".gradient-text" style="overflow: auto;">
       <h2 class="text-5xl font-bold LoginHere relative z-10">Login Here</h2>
       <h3 class="text-orange-400 mb-1"><span class="auto-type"></span></h3>
@@ -22,31 +31,40 @@
 
     </div>
 
-
+    <!-- Script for typed.js library (currently empty) -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-
-    </script>
-
+   
+    <!-- Login Page where user signs into existing account through providing email and password-->
     <form id="loginForm" action="/auth/login" method="post" class="w-60p mx-auto" onsubmit="storeEmail(event)">
+      
+      <!-- Email input field -->
       <div class="line">
         <i class="ri-hashtag text-orange-400 mr-2"></i>
         <input type="email" name="email" id="email" placeholder="Student Email Address"
           class="appearance-none bg-transparent border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none mb-6">
       </div>
+      
+      <!-- Password input field -->
       <div class="wrapper">
         <input type="password" name="password" id="password" placeholder="Password" class="appearance-none bg-transparent border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none mb-6" style="color: #ffa57d;">
         <span class="show-btn"><i class="fas fa-eye"></i></span>
       </div>
+
+      <!-- Submit btn input field -->
       <button type="submit" id="login"
         class="login-btn w-full py-2 px-4 mt-4 mb-8 bg-orange-400 text-orange rounded-md transition duration-300"> Login</button>
        </div>     
       </form>
 
 </div>
+
+  <!-- Script for custom JavaScript functionality -->
   <script src="/views/script.js"></script>
+
+  <!-- Font Awesome for additional icons -->
   <script src="https://kit.fontawesome.com/e770c84433.js" crossorigin="anonymous"></script>
 
+  <!-- Decorative background shapes -->
   <div class="absolute">
     <div class="bg-shape1 bg-purple opacity-50 bg-blur"></div>
     <div class="bg-shape2 bg-pink opacity-50 bg-blur"></div>
@@ -55,12 +73,13 @@
   </div>
 
 <script>
-  
 
+ // Add event listeners to elements with class 'grade' and 'courseType' to call saveGpa function on change
 document.querySelectorAll('.grade, .courseType').forEach(element => {
     element.addEventListener('change', saveGpa);
 });
 
+// Function validates if user entered an authentemail
   function validateAndRedirect() {
       const email = document.getElementById('email').value;
       if (email) {
@@ -70,6 +89,7 @@ document.querySelectorAll('.grade, .courseType').forEach(element => {
       }
     }
 
+    // Allows user to toggle between seeing password 
     const passField = document.querySelector("input");
     const showBtn = document.querySelector("span i");
     showBtn.onclick = (()=>{
@@ -82,16 +102,13 @@ document.querySelectorAll('.grade, .courseType').forEach(element => {
       }
     });
 
-    function openOptions() {
-    document.getElementById('opencalc').classList.remove('hidden');
-    document.getElementById('openresults').classList.remove('hidden');
-  }
+  // Initialize typed.js for auto-typing text effect
   var typed = new Typed(".auto-type", {
     strings: ["GPGenius, based on Silver Creek High School"],
     typeSpeed: 75,
   });
   
-
+  // Show/Hide password field on button click
   document.addEventListener('DOMContentLoaded', (event) => {
     const passField = document.querySelector("#password");
     const showBtn = document.querySelector(".show-btn i");
@@ -107,6 +124,8 @@ document.querySelectorAll('.grade, .courseType').forEach(element => {
     });
   });  
 
+
+  // Function to store email in local storage and submit the form
   function storeEmail(event) {
   event.preventDefault();
   const email = document.getElementById('email').value;
@@ -117,7 +136,6 @@ document.querySelectorAll('.grade, .courseType').forEach(element => {
     alert('Please enter your email.');
   }
 }
-
   </script>
 
 </body>

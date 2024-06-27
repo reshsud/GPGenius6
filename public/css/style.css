@@ -1,436 +1,364 @@
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  background-size: cover;
+  background-position: center;
+}
+
+.LoginHere {
+  min-height: 60px;
+  background-image: linear-gradient(90deg, #ff0000, #ffa57d, #ffffff);
+  -webkit-background-clip: text;
+  color: transparent;
+  padding-bottom: 10px;
+  z-index: 100;
+}
+
+.gradient-text {
+  background-image: linear-gradient(90deg, #ff6a00, #ffa57d, #ffd9a8);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.text-orange-400 {
+  margin-bottom: 0px;
+  color: #fba57e;
+  z-index: 0;
+}
+
+.border-orange-400 {
+  margin-bottom: 0px;
+  color: #fba57e;
+  z-index: 0;
+}
+
+.dark-orange {
+  color: #ff5701;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.location {
+  position: fixed;
+  z-index: 10;
+  bottom: 30%;
+}
+
+.locationTwo {
+  position: fixed;
+  left: 41%;
+  z-index: 10;
+  bottom: 25%;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.bg-shape1,
+.bg-shape2,
+.bg-shape3,
+.bg-shape4 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 9999px;
+  z-index: -100000000000;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.bg-shape1 {
+  background-color: #ff8647;
+  animation-name: one;
+}
+
+.bg-shape2 {
+  background-color: #ffe4a8;
+  animation-name: two;
+}
+
+.bg-shape3 {
+  background-color: #ffc4ab;
+  animation-name: three;
+}
+
+.bg-shape4 {
+  background-color: #ffaa00;
+  animation-name: four;
+}
+
+.login-btn:hover {
+  background-color: #ff6a00;
+  color: white;
+}
+
+.login-btn:active {
+  background-color: #ff8c00;
+  color: white;
+}
+
+@keyframes one {
+  0%,
+  100% {
+    right: 0;
+    top: 0;
   }
-  
-  body {
-    background: rgb(255, 255, 255);
-    font-family: 'Poppins', sans-serif;
-    background-size: cover;
-    background-position: center;
+
+  25% {
+    right: 20px;
+    top: 70px;
   }
-  
-  .LoginHere {
-    min-height: 60px;
-    background-image: linear-gradient(90deg,  #ff0000, #ffa57d, #ffffff);
-    -webkit-background-clip: text;
-    color: transparent;
-    padding-bottom: 10px;
-    z-index: 100;
+
+  50% {
+    right: 20px;
+    top: 150px;
   }
-  
-  .gradient-text{
-    background-image: linear-gradient(90deg, #ff6a00, #ffa57d, #ffd9a8);
-    -webkit-background-clip: text;
-    color: transparent;
+
+  75% {
+    right: 50px;
+    top: 75px;
   }
-  
-  .text-orange-400 {
-    margin-bottom: 0px;
-    color: #fba57e;
-    z-index: 0;
-    
+}
+
+@keyframes two {
+  0%,
+  100% {
+    left: 400px;
+    top: 0;
   }
-  
-  .border-orange-400 {
-    margin-bottom: 0px;
-    color: #fba57e;
-    z-index: 0;
+
+  25% {
+    left: 250px;
+    top: 150px;
   }
-  
-  .dark-orange {
-    color: #ff5701;
-    font-weight: bold;
-    cursor: pointer;
+
+  50% {
+    left: 300px;
+    top: 50px;
   }
-  
- 
-.location{
-    
-    position: fixed;
-    z-index: 10;
-    bottom: 30%
-    
-    
+
+  75% {
+    left: 700px;
+    top: 100px;
   }
-  
-  .locationTwo{
-    
-    position: fixed;
-    left: 41%;
-    z-index: 10;
-    bottom: 25%
-  
+}
+
+@keyframes three {
+  0%,
+  100% {
+    bottom: 40px;
+    left: 10px;
   }
-  
-  .login-box {
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, .4);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(7px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    width: 90%;
-    height: 90%;
-    position: absolute;
-    text-align: center;
-    justify-content: center;
-    z-index: -1;
+
+  25% {
+    bottom: 100px;
+    left: 400px;
   }
-  
-  .absolute {
-    position: absolute;
+
+  50% {
+    bottom: 50px;
+    left: 250px;
   }
-  
-  .bg-shape1,
-  .bg-shape2,
-  .bg-shape3,
-  .bg-shape4 {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    border-radius: 9999px;
-    z-index: -2;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
+
+  75% {
+    bottom: 50px;
+    left: 100px;
   }
-  
-  .bg-shape1 {
-    background-color: #ff8647;
-    animation-name: one;
+}
+
+@keyframes four {
+  0%,
+  100% {
+    top: 0;
+    center: 0;
   }
-  
-  .bg-shape2 {
-    background-color: #ffe4a8;
-    animation-name: two;
+
+  25% {
+    top: -150px;
+    center: -100px;
   }
-  
-  .bg-shape3 {
-    background-color: #ffc4ab;
-    animation-name: three;
+
+  50% {
+    top: -250px;
+    center: -50px;
   }
-  
-  .bg-shape4 {
-    background-color: #ffaa00;
-    animation-name: four;
+
+  75% {
+    top: -100px;
+    center: -30px;
   }
-  
-  .login-btn:hover {
-    background-color: #ff6a00;
-    color: white; 
-  }
-  
-  .login-btn:active {
-    background-color: #ff8c00; 
-    color: white; 
-  }
-  
-  @keyframes one {
-    0%,
-    100% {
-      right: 0;
-      top: 0;
-    }
-  
-    25% {
-      right: 20px;
-      top: 70px;
-    }
-  
-    50% {
-      right: 20px;
-      top: 150px;
-    }
-  
-    75% {
-      right: 50px;
-      top: 75px;
-    }
-  }
-  
-  @keyframes two {
-    0%,
-    100% {
-      left: 400px;
-      top: 0;
-    }
-  
-    25% {
-      left: 250px;
-      top: 150px;
-    }
-  
-    50% {
-      left: 300px;
-      top: 50px;
-    }
-  
-    75% {
-      left: 700px;
-      top: 100px;
-    }
-  }
-  
-  @keyframes three {
-    0%,
-    100% {
-      bottom: 40px;
-      left: 10px;
-    }
-  
-    25% {
-      bottom: 100px;
-      left: 400px;
-    }
-  
-    50% {
-      bottom: 50px;
-      left: 250px;
-    }
-  
-    75% {
-      bottom: 50px;
-      left: 100px;
-    }
-  }
-  
-  @keyframes four {
-    0%,
-    100% {
-      top: 0;
-      center: 0;
-    }
-  
-    25% {
-      top: -150px;
-      center: -100px;
-    }
-  
-    50% {
-      top: -250px;
-      center: -50px;
-    }
-  
-    75% {
-      top: -100px;
-      center: -30px;
-    }
-  }
-  
-  .opacity-50 {
-    opacity: 0.5;
-  }
-  
-  .bg-blur {
-    filter: blur(2rem);
-  }
-  
-  .input-box {
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid #ffa57d;
-    padding-bottom: 8px;
-  }
-  
-  .input-box input {
-    background: transparent;
-    border: none;
-    color: #000000;
-    outline: none;
-    width: 90%;
-  }
-  
-  .input-box input:focus {
-    border-bottom: 2px solid #ff6a00; /* Change border color on focus */
-    color: #000000; /* Change text color on focus */
-  }
-  
-  .input-box input:hover {
-    border-bottom: 2px solid #ff6a00; /* Change border color on hover */
-    color: #000000; /* Change text color on hover */
-  }
-  
-  .login-btn {
-    border: 1px solid #ffa57d;
-    border-radius: 25px;
-    background: transparent;
-    color: #ffa57d;
-    cursor: pointer;
-    display: block;
-    font-size: 16px;
-    margin: 40px auto 20px;
-    outline: none;
-    padding: 10px 0;
-    transition: 0.3s;
-    width: 100%;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  #digitInput {
-      margin-top: 20px;
-      padding: 10px;
-      font-size: 16px;
-      width: 150px;
-      text-align: center;
-  }
-  
-  .button-style {
-    border: 1px solid #ffa57d;
-    border-radius: 25px;
-    color: #ffa57d;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 20px auto;
-    outline: none;
-    padding: 10px 0;
-    transition: background-color 0.3s ease;
-    width: 100%;
-  }
-  
-  .button-style:hover {
-    background-color: #eeaeca;
-  }
-  
-  .button-style:active {
-    background-color: #e6739f; /* Change color on click */
-  }
-  
-  #opencalc, #openresults {
-    display: inline-block;
-    margin: 40px auto 20px;
-    width: 30%;
-    outline: none;
-    padding: 5px 0;
-    cursor: pointer;
-    background: transparent;
-    color: #fba57e;
-    font-size: 16px;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
-    border: 1px solid #fba57e;
-  
-  
-  }
-  
-  #opencalc {
-    width: 15%;
-    animation: opencalc 1.0s;
-  }
-  
-  #openresults {
-    width: 15%;
-    animation: openresults 1.0s;
-  }
-  
-  #opencalc:hover, #openresults:hover {
-    background-color: #454545;
-  }
-  
-  #opencalc.hidden, #openresults.hidden {
-    display: none;
-  }
-  
-  @keyframes opencalc {
-    0% {
-      opacity: 0;
-      transform: translateY(30px) scale(0.9);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0px) scale(1);
-    }
-  }
-  
-  @keyframes openresults {
-    0% {
-      opacity: 0;
-      transform: translateY(30px) scale(0.9);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0px) scale(1);
-    }
-  }
-  
-  .line{
-    color: #fba57e;
-  }
-  
-  #studentID{
-    border-bottom: 1px solid orange;
-  }
-  
-  #password{
-    border-bottom: 1px solid orange;
-  }
-  
-  #digitInput{
-    border-bottom: 1px solid orange;
-  }
-  
-  .w-3p {
-    width: 40px; /* Adjust the width as needed */
-  }
-  
-  .border-b-custom{
-    border-bottom-color: #ffa57d;
-    border-bottom-width: 2px;
-  }
-  
-  .pin-input {
-    width: 40px; /* Adjust width as needed */
-    height: 40px; /* Adjust height as needed */
-  }
-  
-  
-  
-  .header {
-    position: fixed;
-    top: 140px;
-    left: 0;
-    width: 100%;
-    z-index: 1; 
-    background-image: linear-gradient(90deg, #ff6a00, #ffa57d, #ffd9a8);
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-  
-  .wrapper{
-    position: relative;
-    height: 35px;
-    width: 250px;
-  }
-  .wrapper input{
-    width: 100%;
-    height: 100%;
-    border: none;
-    padding-left: 15px;
-    font-size: 16px;
-    outline: none;
-  
-    
-  }
-  .wrapper input::placeholder{
-    font-size: 17px;
-    margin-bottom: 0px;
-  }
-  .wrapper span{
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    color: #fba57e;
-    cursor: pointer;
-    display: none;
-  }
-  .wrapper input:valid ~ span{
-    display: block;
-  }
-  .wrapper span i.hide-btn::before{
-    content: "\f070";
-  }
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.bg-blur {
+  filter: blur(2rem);
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #ffa57d;
+  padding-bottom: 8px;
+}
+
+.input-box input {
+  background: transparent;
+  border: none;
+  color: #000000;
+  outline: none;
+  width: 90%;
+}
+
+.input-box input:focus {
+  border-bottom: 2px solid #ff6a00; /* Change border color on focus */
+  color: #000000; /* Change text color on focus */
+}
+
+.input-box input:hover {
+  border-bottom: 2px solid #ff6a00; /* Change border color on hover */
+  color: #000000; /* Change text color on hover */
+}
+
+.login-btn {
+  border: 1px solid #ffa57d;
+  border-radius: 25px;
+  background: transparent;
+  color: #ffa57d;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  margin: 40px auto 20px;
+  outline: none;
+  padding: 10px 0;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+#digitInput {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+  width: 150px;
+  text-align: center;
+}
+
+.button-style {
+  border: 1px solid #ffa57d;
+  border-radius: 25px;
+  color: #ffa57d;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 20px auto;
+  outline: none;
+  padding: 10px 0;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.button-style:hover {
+  background-color: #eeaeca;
+}
+
+.button-style:active {
+  background-color: #e6739f; /* Change color on click */
+}
+
+.line {
+  color: #fba57e;
+}
+
+#studentID {
+  border-bottom: 1px solid orange;
+}
+
+#password {
+  border-bottom: 1px solid orange;
+}
+
+#digitInput {
+  border-bottom: 1px solid orange;
+}
+
+.w-3p {
+  width: 40px; /* Adjust the width as needed */
+}
+
+.border-b-custom {
+  border-bottom-color: #ffa57d;
+  border-bottom-width: 2px;
+}
+
+.header {
+  position: fixed;
+  top: 140px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-image: linear-gradient(90deg, #ff6a00, #ffa57d, #ffd9a8);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.wrapper {
+  position: relative;
+  height: 35px;
+  width: 250px;
+}
+.wrapper input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding-left: 15px;
+  font-size: 16px;
+  outline: none;
+}
+.wrapper input::placeholder {
+  font-size: 17px;
+  margin-bottom: 0px;
+}
+.wrapper span {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #fba57e;
+  cursor: pointer;
+  display: none;
+}
+.wrapper input:valid ~ span {
+  display: block;
+}
+.wrapper span i.hide-btn::before {
+  content: "\f070";
+}

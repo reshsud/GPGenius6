@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    background-image: linear-gradient(90deg, #ff6a00, #ffa57d, #ffd9a8);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: h2 0.5s;
+  }
+
+  table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 2px;
+    text-align: center;
+    color: #ff8647;
+}
+th, td {
+    padding: 5px;
+}
+th, td {
+    font-size: 1.2em; /* Adjust the font size as needed */
+}
+
+.bg-shape1,
+.bg-shape2,
+.bg-shape3,
+.bg-shape4,
+.bg-shape5,
+.bg-shape6,
+.bg-shape7,
+.bg-shape8{
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 9999px;
+  z-index: -2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.bg-shape1 {
+  background-color: #ff8647;
+  animation-name: one;
+}
+
+.bg-shape2 {
+  background-color: #ffe4a8;
+  animation-name: two;
+}
+
+.bg-shape3 {
+  background-color: #ffc4ab;
+  animation-name: three;
+}
+
+.bg-shape4 {
+  background-color: #ffaa00;
+  animation-name: four;
+}
+
+.bg-shape5 {
+  background-color: #ff8647;
+  animation-name: five;
+}
+
+.bg-shape6 {
+  background-color: #ffe4a8;
+  animation-name: six;
+}
+
+.bg-shape7 {
+  background-color: #ffc4ab;
+  animation-name: seven;
+}
+
+.bg-shape8 {
+  background-color: #ffaa00;
+  animation-name: eight;
+}
+
+@keyframes one {
+  0%,
+  100% {
+    right: 0;
+    top: 1;
+  }
+
+  25% {
+    right: 20px;
+    top: 10px;
+  }
+
+  50% {
+    right: 20px;
+    top: 20px;
+  }
+
+  75% {
+    right: 50px;
+    top: 30px;
+  }
+}
+
+@keyframes two {
+  0%,
+  100% {
+    left: 400px;
+    top: 0px;
+  }
+
+  25% {
+    left: 250px;
+    top: 150px;
+  }
+
+  50% {
+    left: 300px;
+    top: 50px;
+  }
+
+  75% {
+    left: 700px;
+    top: 100px;
+  }
+}
+
+@keyframes three {
+  0%,
+  100% {
+    bottom: 40px;
+    left: 10px;
+  }
+
+  25% {
+    bottom: 100px;
+    left: 400px;
+  }
+
+  50% {
+    bottom: 50px;
+    left: 250px;
+  }
+
+  75% {
+    bottom: 50px;
+    left: 100px;
+  }
+}
+
+@keyframes four {
+  0%,
+  100% {
+    top: 0px;
+    center: 0px;
+  }
+
+  25% {
+    top: -150px;
+    center: -100px;
+  }
+
+  50% {
+    top: -250px;
+    center: -50px;
+  }
+
+  75% {
+    top: -200px;
+    center: -30px;
+  }
+}
+
+@keyframes five {
+  0%,
+  100% {
+    right: 500px;
+    bottom: 1300px;
+  }
+
+  25% {
+    right: 200px;
+    bottom: 1200px;
+  }
+
+  50% {
+    right: 300px;
+    bottom: 1400px;
+  }
+
+  75% {
+    right: 100px;
+    bottom: 1100px;
+  }
+}
+
+@keyframes six {
+  0%,
+  100% {
+    left: 400px;
+    bottom: 1000px;
+  }
+
+  25% {
+    left: 200px;
+    bottom: 1300px;
+  }
+
+  50% {
+    left: 500px;
+    bottom: 1500px;
+  }
+
+  75% {
+    left: 350px;
+    bottom: 1300px;
+  }
+}
+
+@keyframes seven {
+  0%,
+  100% {
+    bottom: 890px;
+    left: 100px;
+  }
+
+  25% {
+    bottom: 800px;
+    left: 400px;
+  }
+
+  50% {
+    bottom: 1000px;
+    left: 250px;
+  }
+
+  75% {
+    bottom: 1500px;
+    left: 100px;
+  }
+}
+
+@keyframes eight {
+  0%,
+  100% {
+    bottom: 1000px;
+    center: 0px;
+  }
+
+  25% {
+    bottom: 1500px;
+    center: -100px;
+  }
+
+  50% {
+    bottom: 1600px;
+    center: -50px;
+  }
+
+  75% {
+    bottom: 1300px;
+    center: -30px;
+  }
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.bg-blur {
+  filter: blur(2rem);
+}
